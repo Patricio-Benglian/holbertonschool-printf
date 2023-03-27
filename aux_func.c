@@ -18,7 +18,7 @@ void print_char(va_list args)
  */
 void print_string(va_list args)
 {
-	int temp = va_arg(args, int); /* holds value in va_arg */
+	char *temp = va_arg(args, char *); /* holds value in va_arg */
 	int t;
 
 	for (t = 0; temp[t]; t++)
@@ -30,8 +30,7 @@ void print_string(va_list args)
  */
 void print_perc(va_list args)
 {
-	void(args);
-
+	void (va_list args);
 	write(1, "%", 1);
 }
 
