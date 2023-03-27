@@ -7,10 +7,6 @@
 #include <stdio.h>
 #include <unistd.h>
 
-/* Libraries of other .c files */
-#include "_printf.c"
-#include "aux_func.c"
-
 /* Structure */
 typedef struct printer
 {

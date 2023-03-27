@@ -3,16 +3,17 @@
 #include <stdarg.h>
 #include "main.h"
 #include "aux_func.c"
+
 /**
  * _printf - Entry point
  *
  * Return: Always 0 (Success)
  */
+
 int _printf(const char *format, ...)
 {
 	/* declare variables */
 	int i; /* iterator */
-	char *temp; /* holds va_arg value */
 	printer_t types[] = {
 		{"c", print_char},
 		{"s", print_string},

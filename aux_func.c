@@ -17,7 +17,7 @@ void print_string(va_list args)
 
 }
 
-void print_perc(void)
+void print_perc(va_list args)
 {
 
 }
