@@ -15,12 +15,6 @@ int _printf(const char *format, ...)
 {
 	/* declare variables */
 	int i; /* iterator */
-	printer_t types[] = {
-		{"c", print_char},
-		{"s", print_string},
-		{"%", print_perc},
-		{NULL, NULL},
-	};
 
 	/* initialize variadic stuff */
 	va_list args; /* makes list of args */
@@ -31,10 +25,11 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			get_conv(format[i + 1]);
+			get_conv(format[i + 1], args);
 			i += 2;
 		}
-		write(1, &format[i], 1);
+		else 
+			write(1, &format[i], 1);
 	}
 
 	va_end(args);

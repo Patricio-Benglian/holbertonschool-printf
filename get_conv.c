@@ -2,11 +2,12 @@
 #include "aux_func.c"
 
 /**
- *
+ * get_conv - gets the conversion value and executes respective code
  */
-void (*get_conv)(char *s)
+void (*get_conv(char s, va_list args))
 {
 	int i; /* iterates through Struct */
+	int
 	/* Struct that associates a character with a function */
 	printer_t types[] = {
 		{"c", print_char},
@@ -17,10 +18,10 @@ void (*get_conv)(char *s)
 
 	for (i = 0; types[i].conv; i++)
 	{
-		if (/* compare value of S with value stored in types[i].conv  */)
+		if (s == types[i].conv)
 			{
-				types[i].p;
-				return ();
+				types[i].p(args);
+				return (0);
 			}
 	}
 	/* add conditional if value does not equal anything in struct */
