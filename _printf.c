@@ -3,6 +3,7 @@
 #include <stdarg.h>
 #include "main.h"
 #include "aux_func.c"
+#include "get_conv.c"
 
 /**
  * _printf - Entry point
@@ -21,11 +22,9 @@ int _printf(const char *format, ...)
 		{NULL, NULL},
 	};
 
-	/* we have to equalize va_arg to temp at some point in the loop */
-
-	/* init variadic stuff */
-	va_list args;
-	va_start(args, format);
+	/* initialize variadic stuff */
+	va_list args; /* makes list of args */
+	va_start(args, format); /* initializes it */
 	
 	/* loop */
 	for (i = 0; format[i]; i++)
