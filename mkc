@@ -1,0 +1,25 @@
+#!/bin/bash
+echo "input filename"
+read filename
+echo "input prototype without semicolon tho"
+read prototype
+echo "#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include \"variadic_functions.h\"
+/**
+ * $prototype - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+$prototype
+{
+
+}" > $filename
+chmod u+x $filename
+echo "$prototype;" >> main.h
+sed -i '$ d' variadic_functions.h >> variadic_functions.h
+echo "$prototype;
+#endif" >> variadic_functions.h
+vi $filename
+
