@@ -9,7 +9,7 @@ void print_char(va_list args)
 {
 	int temp = va_arg(args, int); /* holds value in va_arg */
 
-	write(1, temp, 1);
+	write(1, &temp, 1);
 }
 
 /**
@@ -22,7 +22,7 @@ void print_string(va_list args)
 	int t;
 
 	for (t = 0; temp[t]; t++)
-		write(1, temp[t], 1);
+		write(1, &temp[t], 1);
 }
 /**
  * print_perc - aux func to convert %%

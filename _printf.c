@@ -30,7 +30,10 @@ int _printf(const char *format, ...)
 	for (i = 0; format[i]; i++)
 	{
 		if (format[i] == '%')
-			
+		{
+			get_conv(format[i + 1]);
+			i += 2;
+		}
 		write(1, &format[i], 1);
 	}
 
