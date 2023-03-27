@@ -6,7 +6,7 @@ read prototype
 echo "#include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include \"variadic_functions.h\"
+#include \"main.h\"
 /**
  * $prototype - Entry point
  *
@@ -17,9 +17,8 @@ $prototype
 
 }" > $filename
 chmod u+x $filename
-echo "$prototype;" >> main.h
-sed -i '$ d' variadic_functions.h >> variadic_functions.h
+sed -i '$ d' main.h >> main.h
 echo "$prototype;
-#endif" >> variadic_functions.h
+#endif" >> main.h
 vi $filename
 
