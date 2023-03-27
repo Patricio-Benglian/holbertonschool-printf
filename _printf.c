@@ -6,8 +6,8 @@
 #include "get_conv.c"
 
 /**
- * _printf - Entry point
- *
+ * _printf - prints string, reads conversion flags
+ * @format: string to print
  * Return: Always 0 (Success)
  */
 
@@ -25,7 +25,6 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			get_conv(format[i + 1], args);
 			i += 2;
 		}
 		else 
@@ -34,17 +33,4 @@ int _printf(const char *format, ...)
 
 	va_end(args);
 	return (0);
-
-
-
-	/* write struct same as in calculator and print all. 
-	 * {c, print_char};
-	 * {s, print_string};
-	 * etc etc 
-	 *
-	 *
-	 *
-	 *
-	 *
-	 * */
 }
