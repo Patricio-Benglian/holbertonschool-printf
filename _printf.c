@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			get_conv(format[i + 1], args);
+			aux_conv(format[i + 1], args);
 			i += 2;
 		}
 		else

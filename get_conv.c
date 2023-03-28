@@ -6,7 +6,7 @@
  * @s: character to compare struct with
  * @args: list to send through to auxiliary function
  */
-char (*get_conv)(char s, va_list args)
+char *(*aux_conv)(char s, va_list args)
 {
 	int i; /* iterates through Struct */
 	/* Struct that associates a character with a function */
@@ -26,6 +26,6 @@ char (*get_conv)(char s, va_list args)
 			}
 		i++;
 	}
-	exit (100);
+	exit(100);
 	/* add conditional if value does not equal anything in struct */
 }
