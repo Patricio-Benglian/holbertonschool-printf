@@ -4,7 +4,7 @@
 /**
  * get_conv - gets the conversion value and executes respective code
  */
-int (*get_conv(char s, va_list args))
+char (*get_conv)(s)(va_list args)
 {
 	int i; /* iterates through Struct */
 	/* Struct that associates a character with a function */
@@ -19,6 +19,7 @@ int (*get_conv(char s, va_list args))
 	{
 		if (s == ops[i].conv)
 			{
+				/* returns call to print_x function */
 				return (ops[i].p(args));
 			}
 		i++;

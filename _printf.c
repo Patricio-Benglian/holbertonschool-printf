@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include "main.h"
-#include "aux_func.c"
 #include "get_conv.c"
 
 /**
@@ -27,7 +26,7 @@ int _printf(const char *format, ...)
 		{
 			i += 2;
 		}
-		else 
+		else
 			write(1, &format[i], 1);
 	}
 

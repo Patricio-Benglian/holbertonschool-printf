@@ -29,7 +29,7 @@ void print_string(va_list args)
  * print_perc - aux func to convert %%
  * @args: list imported from main function. not used in this case, voided
  */
-void print_perc(va_list args)
+void print_perc()
 {
 	/* can't void args for some reason. probably easiest to
 	 * just define this case in the main function.
