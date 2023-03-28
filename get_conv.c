@@ -18,15 +18,17 @@ void aux_conv(char s, va_list args)
 		{NULL, NULL},
 	};
 
-	for (i = 0; *ops[i].conv; i++)
-	{
-		/* looks for a match between char and values in struct */
-	if (s == *ops[i].conv)
-	{
-		/* calls to print relevant function */
-		ops[i].p(args);
-		return; /* end the process */
-	}
-	}
-	exit(100);
+	if (s && args)
+		for (i = 0; ops[i].conv != NULL; i++)
+		{
+			/* looks for a match between char and values in struct */
+			if (s == *ops[i].conv)
+			{
+				/* calls to print relevant function */
+				ops[i].p(args);
+				return; /* end the process */
+			}
+		}
+
+	exit(0);
 }
