@@ -20,5 +20,5 @@ int _printf(const char *format, ...);
 void print_char(va_list args);
 void print_string(va_list args);
 void print_perc(); /* args isnt necessary */
-void (*get_conv)(s)(va_list args); /* this is so wrong */
+char (*get_conv)(char s, va_list args); /* this is so wrong */
 #endif
