@@ -19,7 +19,8 @@ int aux_conv(char s, va_list args)
 	};
 
 	if (s && args)
-		for (i = 0; ops[i].conv != NULL; i++)
+	{
+		for (i = 0; i < 3; i++)
 		{
 			/* looks for a match between char and values in struct */
 			if (s == *ops[i].conv)
@@ -28,6 +29,6 @@ int aux_conv(char s, va_list args)
 				return (ops[i].p(args));
 			}
 		}
-
-	exit(0);
+	}
+	return (1);
 }
