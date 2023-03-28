@@ -9,7 +9,7 @@
  */
 void aux_conv(char s, va_list args)
 {
-	int i; /* iterates through Struct */
+	unsigned int i; /* iterates through Struct */
 	/* Struct that associates a character with a function */
 	printer_t ops[] = {
 		{"c", print_char},
@@ -20,10 +20,12 @@ void aux_conv(char s, va_list args)
 
 	for (i = 0; *ops[i].conv; i++)
 	{
+		/* looks for a match between char and values in struct */
 		if (s == *ops[i].conv)
 			{
-				/* returns call to print_x function */
+				/* calls to print relevant function */
 				ops[i].p(args);
+				return; /* end the process */
 			}
 		i++;
 	}

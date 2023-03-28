@@ -22,8 +22,13 @@ void print_string(va_list args)
 	char *temp = va_arg(args, char *); /* holds value in va_arg */
 	int t;
 
+	if (temp == NULL)
+		return;
 	for (t = 0; temp[t]; t++)
+	{
 		write(1, &temp[t], 1);
+	}
+	return;
 }
 /**
  * print_perc - aux func to convert %%

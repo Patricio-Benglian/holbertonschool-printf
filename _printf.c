@@ -20,10 +20,12 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			/* func = */aux_conv(format[i + 1], args);
+			/* gets conv value and then runs func */
+			aux_conv(format[i + 1], args);
+			/* iterate past the conv value after % */
 			i += 2;
 		}
-		else
+		if (format[i])
 			write(1, &format[i], 1);
 	}
 
