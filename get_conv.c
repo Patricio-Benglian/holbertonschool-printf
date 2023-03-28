@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * get_conv - gets the conversion value and executes respective code
+ * aux_conv - gets the conversion value and executes respective code
  * @s: character to compare struct with
  * @args: list to send through to auxiliary function
  */
