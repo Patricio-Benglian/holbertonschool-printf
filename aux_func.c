@@ -19,8 +19,10 @@ void print_char(va_list args)
  */
 void print_string(va_list args)
 {
-	char *temp = va_arg(args, char *); /* holds value in va_arg */
+	char *temp;
 	int t;
+
+	temp = va_arg(args, char *); /* holds value in va_arg */
 
 	if (temp == NULL)
 		return;
@@ -28,17 +30,11 @@ void print_string(va_list args)
 	{
 		write(1, &temp[t], 1);
 	}
-	return;
 }
 /**
  * print_perc - aux func to convert %%
- * @args: list imported from main function. not used in this case, voided
  */
-void print_perc()
+void print_perc(void)
 {
 	write(1, "%", 1);
 }
-
-/* main de prueba:
- * que pasa si:
- * printf("%s",) */
