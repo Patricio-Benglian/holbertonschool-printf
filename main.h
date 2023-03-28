@@ -18,6 +18,6 @@ typedef struct printer
 int _printf(const char *format, ...);
 void print_char(va_list args);
 void print_string(va_list args);
-void print_perc(void); /* args isnt necessary */
+void print_perc(va_list args); /* args isnt necessary */
 void aux_conv(char s, va_list args); /* this is so wrong */
 #endif

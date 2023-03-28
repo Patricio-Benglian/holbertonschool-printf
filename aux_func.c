@@ -34,7 +34,8 @@ void print_string(va_list args)
 /**
  * print_perc - aux func to convert %%
  */
-void print_perc(void)
+void print_perc(va_list args)
 {
+	(void) args;
 	write(1, "%", 1);
 }
