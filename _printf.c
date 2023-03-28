@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <stdarg.h>
-#include "main.h"
 #include "get_conv.c"
+#include "main.h"
 
 /**
  * _printf - prints string, reads conversion flags
@@ -24,7 +25,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			aux_conv(format[i + 1], args);
+			/* func = */aux_conv(format[i + 1], args);
 			i += 2;
 		}
 		else
