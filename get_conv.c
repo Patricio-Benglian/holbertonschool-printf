@@ -7,7 +7,7 @@
  * @s: character to compare struct with
  * @args: list to send through to auxiliary function
  */
-void aux_conv(char s, va_list args)
+int aux_conv(char s, va_list args)
 {
 	unsigned int i; /* iterates through Struct */
 	/* Struct that associates a character with a function */
@@ -25,8 +25,7 @@ void aux_conv(char s, va_list args)
 			if (s == *ops[i].conv)
 			{
 				/* calls to print relevant function */
-				ops[i].p(args);
-				return; /* end the process */
+				return (ops[i].p(args));
 			}
 		}
 
