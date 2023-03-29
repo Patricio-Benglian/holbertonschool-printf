@@ -16,6 +16,7 @@ int _printf(const char *format, ...)
 
 	va_start(args, format); /* initializes it */
 
+	/* if format doesnt exist, error */
 	if (format == NULL)
 		return (-1);
 	/* loop */
