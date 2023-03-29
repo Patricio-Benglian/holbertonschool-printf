@@ -5,7 +5,8 @@
 /**
  * aux_conv - gets the conversion value and executes respective code
  * @s: character to compare struct with
- * @args: list to send through to auxiliary function
+ * @args: list to send through to auxiliary functioni
+ * Return: return value from called function or -1 on error
  */
 int aux_conv(char s, va_list args)
 {

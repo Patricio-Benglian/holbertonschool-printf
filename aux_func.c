@@ -26,7 +26,9 @@ int print_string(va_list args)
 	temp = va_arg(args, char *); /* holds value in va_arg */
 
 	if (temp == NULL)
-		return (-1);
+	{
+		temp = "(null)";
+	}
 	for (t = 0; temp[t]; t++)
 	{
 		write(1, &temp[t], 1);
