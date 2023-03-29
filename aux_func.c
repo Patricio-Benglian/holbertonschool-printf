@@ -1,4 +1,3 @@
-
 #include <stdarg.h>
 #include <unistd.h>
 #include "main.h"
@@ -11,7 +10,9 @@ int print_char(va_list args)
 {
 	char temp = va_arg(args, int); /* holds value in va_arg */
 
-	return write(1, &temp, 1);
+	write(1, &temp, 1);
+
+	return(1);
 }
 
 /**
@@ -26,7 +27,7 @@ int print_string(va_list args)
 	temp = va_arg(args, char *); /* holds value in va_arg */
 
 	if (temp == NULL)
-		temp = "(null)";
+		return(-1);
 
 	while (temp[t])
 	{
@@ -40,5 +41,6 @@ int print_string(va_list args)
  */
 int print_perc(va_list args __attribute__((unused)))
 {
-	return (write(1, "%", 1));
+	(write(1, "%", 1));
+	return (1);
 }

@@ -15,7 +15,7 @@ int aux_conv(char s, va_list args)
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_perc},
-		{NULL, NULL},
+		{'\0', NULL},
 	};
        	
 	while (ops[i].conv && s)/* Loop to find a function that matches the input character */
@@ -35,5 +35,8 @@ int aux_conv(char s, va_list args)
 		return (2);/* return 2 char */
 	}
 	else /* if s == NULL*/		
+	{
 		return write(1, "%", 1);
+	}
+	return(-1);
 }
