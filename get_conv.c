@@ -28,5 +28,5 @@ int aux_conv(char s, va_list args)
 			}
 			i++;
 		}
-	return (1);
+	return (-1);
 }

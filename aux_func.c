@@ -11,7 +11,7 @@ int print_char(va_list args)
 	int temp = va_arg(args, int); /* holds value in va_arg */
 
 	write(1, &temp, 1);
-	return (0);
+	return (1); /* return amount of chars printed */
 }
 
 /**
@@ -31,7 +31,7 @@ int print_string(va_list args)
 	{
 		write(1, &temp[t], 1);
 	}
-	return (t);
+	return (t); /* returned amount of chars printed */
 }
 /**
  * print_perc - aux func to convert %%
@@ -40,5 +40,5 @@ int print_perc(va_list args)
 {
 	(void) args;
 	write(1, "%", 1);
-	return (0);
+	return (1); /* return amount of chars printed */
 }
