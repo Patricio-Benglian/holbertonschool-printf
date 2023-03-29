@@ -38,5 +38,5 @@ int aux_conv(char s, va_list args)
 	{
 		return write(1, "%", 1);
 	}
-	return(-1);
+	exit(-1);
 }

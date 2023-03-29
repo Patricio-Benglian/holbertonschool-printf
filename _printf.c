@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 		/* declare variables */
-	int i, test; /* iterator */
+	int i, test = 0; /* iterator */
 
 	/* initialize variadic stuff */
 	va_list args; /* makes list of args */
@@ -17,24 +17,24 @@ int _printf(const char *format, ...)
 	va_start(args, format); /* initializes it */
 
 	/* loop */
-	if (format != NULL)
-	{	
-		for (i = 0; format[i]; i++)
+	if (!format)
+		return (-1);
+	for (i = 0; format[i]; i++)
+	{
+		if (format[i] == '%')
 		{
-			if (format[i] == '%')
-			{
-				/* gets conv value and then runs func */
-				test += aux_conv(format[i + 1], args);
-				/* iterate past the conv value after % */
-				i++;
-			}
-			else
-			{
-				write(1, &format[i], 1);
-				test++;
-			}
+			/* gets conv value and then runs func */
+			test += aux_conv(format[i + 1], args);
+			/* iterate, past the conv value after % */
+			i++;
+		}
+		else
+		{
+			write(1, &format[i], 1);
+			test++;
 		}
 	}
+
 	va_end(args);
 	return (test);
 }
