@@ -1,27 +1,39 @@
+#include <stdarg.h>
+#include <stdlib.h>
 #include "main.h"
-#include "aux_func.c"
 
 /**
- *
+ * aux_conv - gets the conversion value and executes respective code
+ * @s: character to compare struct with
+ * @args: list to send through to auxiliary function
  */
-void (*get_conv)(char *s)
+int aux_conv(char s, va_list args)
 {
-	int i; /* iterates through Struct */
+	unsigned int i = 0;
 	/* Struct that associates a character with a function */
-	printer_t types[] = {
+	printer_t ops[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_perc},
 		{NULL, NULL},
 	};
-
-	for (i = 0; types[i].conv; i++)
+       	
+	while (ops[i].conv && s)/* Loop to find a function that matches the input character */
 	{
-		if (/* compare value of S with value stored in types[i].conv  */)
-			{
-				types[i].p;
-				return ();
-			}
+		if  (s == *ops[i].conv)
+		{	
+			return ((ops[i].p)(args));
+		}
+
+		i++;
 	}
-	/* add conditional if value does not equal anything in struct */
+	/* If a function is not found that matches the input character */
+	if(s != '\0')
+	{
+		write(1, "%", 1);
+		write(1, &s, 1);
+		return (2);/* return 2 char */
+	}
+	else /* if s == NULL*/		
+		return write(1, "%", 1);
 }
