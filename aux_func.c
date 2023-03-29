@@ -40,5 +40,5 @@ int print_perc(va_list args)
 {
 	(void) args;
 	write(1, "%", 1);
-	return (1); /* return amount of chars printed */
+	return (1);
 }
