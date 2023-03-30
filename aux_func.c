@@ -61,7 +61,7 @@ int print_int(va_list args)
 	unsigned int temp = num;
 	char *ptr;
 
-	ptr = buff[29];
+	&ptr = buff[29]; /* ADDRESS of ptr = buff29, important */
 	*ptr = '\0';
 	while (temp != 0)
 	{
@@ -69,7 +69,7 @@ int print_int(va_list args)
 		temp /= 10;
 	}
 
-	printf("%s", buff);
+	printf("%s", buff); /* test to see if this even prints. (it doesnt) */
 
 	return (0);
 }
