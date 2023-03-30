@@ -37,7 +37,7 @@ int print_string(va_list args)
 }
 /**
  * print_perc - aux func to convert %%
- * @args: arg list which is not used in this function
+ * @args: arg list which is not used in this function.
  */
 int print_perc(va_list args)
 {
