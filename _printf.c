@@ -22,12 +22,20 @@ int _printf(const char *format, ...)
 	/* loop */
 	for (i = 0; format[i]; i++)
 	{
-		if (format[i] == '%' && format[i + 1])
+		if (format[i] == '%')
 		{
 			i++;
 			/* gets conv value and then runs func */
-			count += aux_conv(format[i], args);
-		}		
+			if (!format[i])
+			{
+			va_end(args);
+			return (-1);
+			}
+			else
+			{
+				count += aux_conv(format[i], args);
+			}
+		}
 		else 
 		{
 			write(1, &format[i], 1);
