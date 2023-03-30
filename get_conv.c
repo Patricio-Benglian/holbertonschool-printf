@@ -5,7 +5,8 @@
 /**
  * aux_conv - gets the conversion value and executes respective code
  * @s: character to compare struct with
- * @args: list to send through to auxiliary function
+ * @args: list to send through to auxiliary functioni
+ * Return: return value from called function or -1 on error
  */
 int aux_conv(char s, va_list args)
 {
@@ -19,6 +20,7 @@ int aux_conv(char s, va_list args)
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_perc},
+<<<<<<< HEAD
 		{'\0', NULL},
 	};
        	
@@ -30,14 +32,25 @@ int aux_conv(char s, va_list args)
 		}
 
 <<<<<<< HEAD
+=======
+	/*	{"d", print_int},
+		{"i", print_int,}, */
+		{NULL, NULL},
+	};
+	if (s)
+	{
+>>>>>>> Patricio
 		while (i < 3)
-		{
-			/* looks for a match between char and values in struct */
-			if (s == *ops[i].conv)
 			{
-				/* calls to print relevant function */
-				return (ops[i].p(args));
+	/* looks for a match between char and values in struct */
+				if (s == *ops[i].conv)
+				{
+					/* calls to print relevant function */
+					return (ops[i].p(args));
+				}
+				i++;
 			}
+<<<<<<< HEAD
 			i++;
 		}
 	return (1);
@@ -57,4 +70,8 @@ int aux_conv(char s, va_list args)
 	}
 	exit(-1);
 >>>>>>> Nicoou
+=======
+	}
+	return (0);
+>>>>>>> Patricio
 }

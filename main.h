@@ -6,6 +6,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <limits.h>
 
 /* Structure */
 typedef struct printer
@@ -18,7 +19,8 @@ typedef struct printer
 int _printf(const char *format, ...);
 int print_char(va_list args);
 int print_string(va_list args);
-int print_perc(va_list args); /* args isnt necessary */
-int aux_conv(char s, va_list args); /* this is so wrong */
+int print_perc(va_list args);
+int print_int(va_list args);
+int aux_conv(char s, va_list args);
 #endif
 
