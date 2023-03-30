@@ -3,7 +3,7 @@
 /**
  * _printf - prints string, reads conversion flags
  * @format: string to print
- * Return: Always 0 (Success)
+ * Return: print length
  */
 
 int _printf(const char *format, ...)
