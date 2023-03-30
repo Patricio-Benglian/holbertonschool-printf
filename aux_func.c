@@ -69,7 +69,7 @@ int print_int(va_list args)
 		temp /= 10;
 	}
 
-	printf("%s", buff);
+ 	printf("%s", buff); /* test to see if these even prints. (it doesnt) */
 
 	return (0);
 }
