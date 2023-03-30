@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 				count += aux_conv(format[i], args);
 			}
 		}
-		else 
+		else
 		{
 			write(1, &format[i], 1);
 			count++;

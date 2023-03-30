@@ -4,6 +4,7 @@
 /**
  * print_char - aux function to print arguments called with %c (characters)
  * @args: list imported from main function
+ * Return: amount of chars printed
  */
 
 int print_char(va_list args)
@@ -11,12 +12,13 @@ int print_char(va_list args)
 	int temp = va_arg(args, int); /* holds value in va_arg */
 
 	write(1, &temp, 1);
-	return (1); /* return amount of chars printed */
+	return (1);
 }
 
 /**
  * print_string - aux function to print arguments called with %s (strings)
  * @args: list imported from main function
+ * Return: amount of chars printed
  */
 int print_string(va_list args)
 {
@@ -33,11 +35,12 @@ int print_string(va_list args)
 	{
 		write(1, &temp[t], 1);
 	}
-	return (t); /* returned amount of chars printed */
+	return (t);
 }
 /**
  * print_perc - aux func to convert %%
  * @args: arg list which is not used in this function.
+ * Return: amount of chars printed
  */
 int print_perc(va_list args)
 {
@@ -49,6 +52,7 @@ int print_perc(va_list args)
 /**
  * print_int - aux func to convert %i and %d
  * @args: arg list with argument to print
+ * Return: amount of chars printed
  */
 int print_int(va_list args)
 {
