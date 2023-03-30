@@ -67,25 +67,24 @@ int print_int(va_list args)
 	if (num < 0) /* neg number conversion */
 	{
 		temp = -num;
-		negflag = 1;
+		negflag = 1; /* sets a bool for later use */
 	}
 	else 
 		temp = num;
-	if (temp == 0)
+	if (temp == 0) /* case for printing 0 */ /* PRINTS WEIRD CHAR RIGHT NOW */
 	{
-		temp = num;
-		*--ptr = temp;
-		write(1, ptr, 1);
-		return (1);
+		*--ptr = temp; /* address pointed to by ptr equals 0 */
+		write(1, ptr, 1); /* write value in ptr address */
+		return (1); /* return amount of chars printed */
 	}
-	while (temp != 0)
+	while (temp != 0) /* sets last digit in array then removes last digit */
 	{
 		*--ptr = temp % 10 + '0';
 		temp /= 10;
 	}
-	if (negflag == 1)
+	if (negflag) /* if bool is true put '-' before numbers */
 		*--ptr = '-';
-	while (*ptr)
+	while (*ptr) /* loops until NULL value at end of array */
 	{
 		write(1, ptr, 1);
 		ptr++;
