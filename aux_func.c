@@ -56,20 +56,41 @@ int print_perc(va_list args)
  */
 int print_int(va_list args)
 {
-	char *buff[30];
-	int num = va_arg(args, int);
-	unsigned int temp = num;
+	char buff[30];
+	int num = va_arg(args, int), count = 0, negflag = 0;
+	unsigned int temp;
 	char *ptr;
 
-	&ptr = buff[29]; /* ADDRESS of ptr = buff29, important */
-	*ptr = '\0';
+	ptr = &buff[29]; /* ptr points to address of buffer */
+	*ptr = '\0'; /* make last space in array NULL to mark end */
+
+	if (num < 0) /* neg number conversion */
+	{
+		temp = -num;
+		negflag = 1;
+	}
+	else 
+		temp = num;
+	if (temp == 0)
+	{
+		temp = num;
+		*--ptr = temp;
+		write(1, ptr, 1);
+		return (1);
+	}
 	while (temp != 0)
 	{
 		*--ptr = temp % 10 + '0';
 		temp /= 10;
 	}
+	if (negflag == 1)
+		*--ptr = '-';
+	while (*ptr)
+	{
+		write(1, ptr, 1);
+		ptr++;
+		count++;
+	}
 
-	printf("%s", buff); /* test to see if this even prints. (it doesnt) */
-
-	return (0);
+	return (count);
 }
