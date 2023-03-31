@@ -25,15 +25,15 @@
 	
 <hr/>
 	
-<h2><id="Content1"> What does it do?</h2>
+<h2><a id="Content1"> What does it do?</h2>
 
-<h2><id="Content2"> Formatting</h2>
-	<h3><id = "Format1">%s</h3>
+<h2><a id="Content2"> Formatting</h2>
+	<h3><a id="Format1">%s</h3>
 		<p> [Insert how it works here] </p>
-	<h3><id = "Format2">%c</h3>
+	<h3><a id="Format2">%c</h3>
 		<p> [Insert how it works here] </p>
-	<h3><id = "Format3">%%</h3>
+	<h3><a id="Format3">%%</h3>
 		<p> [Insert how it works here] </p>
-<h2><id="Content3"> Authors</h2>
+<h2><a id="Content3"> Authors</h2>
 	
 	<p> [Insert authors here] </p>
