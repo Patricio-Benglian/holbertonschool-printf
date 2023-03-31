@@ -9,6 +9,11 @@
 #include <limits.h>
 
 /* Structure */
+/**
+ * struct printer - struct which stores characters and their function
+ * @conv: conversion value to compare
+ * @p: pointer to function
+ */
 typedef struct printer
 {
 	char *conv;
