@@ -73,14 +73,12 @@ int print_int(va_list args)
 		num *= -1;
 		count++;
 	}
-
 	if (n == 0)
 	{
 		write(1, "0", 1);
 		count++;
 		return (1);
 	}
-
 	while (n > 0)
 	{
 		n /= 10;
@@ -88,12 +86,12 @@ int print_int(va_list args)
 		count++;
 	}
 	exp /= 10;
-
-	for(; exp >= 1; exp /= 10)
+	for (; exp >= 1; exp /= 10)
 	{
 		save_num = ((num / exp) % 10 + '0');
 		write(1, &save_num, 1);
 	}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
  	printf("%s", buff); /* test to see if these even prints. (it doesnt) */
@@ -101,4 +99,7 @@ int print_int(va_list args)
 	return (count);
 >>>>>>> Patricio
 
+=======
+	return (count);
+>>>>>>> Patricio
 }
