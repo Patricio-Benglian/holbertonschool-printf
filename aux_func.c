@@ -1,5 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <stdarg.h>
-#include <unistd.h>
 #include "main.h"
 /**
  * print_char - aux function to print arguments called with %c (characters)
@@ -56,40 +58,43 @@ int print_perc(va_list args)
  */
 int print_int(va_list args)
 {
-	char buff[30];
-	int num = va_arg(args, int), count = 0, negflag = 0;
-	unsigned int temp;
-	char *ptr;
+	long int num = va_arg(args, int);
+	long int n = num;
+	int count;
+	char save_num;
+	long int exp = 1;
 
-	ptr = &buff[29]; /* ptr points to address of buffer */
-	*ptr = '\0'; /* make last space in array NULL to mark end */
+	count = 0;
 
-	if (num < 0) /* neg number conversion */
+	if (n < 0)
 	{
-		temp = -num;
-		negflag = 1; /* sets a bool for later use */
-	}
-	else 
-		temp = num;
-	if (temp == 0) /* case for printing 0 */ /* PRINTS WEIRD CHAR RIGHT NOW */
-	{
-		*--ptr = temp; /* address pointed to by ptr equals 0 */
-		write(1, ptr, 1); /* write value in ptr address */
-		return (1); /* return amount of chars printed */
-	}
-	while (temp != 0) /* sets last digit in array then removes last digit */
-	{
-		*--ptr = temp % 10 + '0';
-		temp /= 10;
-	}
-	if (negflag) /* if bool is true put '-' before numbers */
-		*--ptr = '-';
-	while (*ptr) /* loops until NULL value at end of array */
-	{
-		write(1, ptr, 1);
-		ptr++;
+		write(1, "-", 1);
+		n *= -1;
+		num *= -1;
 		count++;
 	}
 
+	if (n == 0)
+	{
+		write(1, "0", 1);
+		count++;
+		return (1);
+	}
+
+	while (n > 0)
+	{
+		n /= 10;
+		exp *= 10;
+		count++;
+	}
+	exp /= 10;
+
+	for(; exp >= 1; exp /= 10)
+	{
+		save_num = ((num / exp) % 10 + '0');
+		write(1, &save_num, 1);
+	}
+
 	return (count);
+
 }
