@@ -15,10 +15,10 @@
 <li><a href="#Content2">Formatting</a></li>
 <ul>
     <li><a href="#Format1">%c</a></li>
-    <li><a href="#%s">%s</a></li>
-	<li><a href="#Format3">%%</a></li>
-	<li><a href="#Format4">%i</a></li>
-	<li><a href="#Format5">%d</a></li>
+    <li><a href="#s">%s</a></li>
+	<li><a href="#c">%%</a></li>
+	<li><a href="#i">%i</a></li>
+	<li><a href="#d">%d</a></li>
 </ul>
 <li><a href="#Content3">Authors</a></li>
 </div>
