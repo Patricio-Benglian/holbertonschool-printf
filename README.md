@@ -15,7 +15,7 @@
 <li><a href="#Content2">Formatting</a></li>
 <ul>
     <li><a href="#Format1">%c</a></li>
-    <li><a href="#Format2">%s</a></li>
+    <li><a href="#%s">%s</a></li>
 	<li><a href="#Format3">%%</a></li>
 	<li><a href="#Format4">%i</a></li>
 	<li><a href="#Format5">%d</a></li>
@@ -28,7 +28,7 @@
 <h2><a id="#Content1"> What does it do?</h2>
 
 <h2><a id="#Content2"> Formatting</h2>
-	<h3><a id="#Format1">%s</h3>
+	<h3><a id="#%s">%s</h3>
 		<p> [Insert how it works here] </p>
 	<h3><a id="#Format2">%c</h3>
 		<p> [Insert how it works here] </p>
