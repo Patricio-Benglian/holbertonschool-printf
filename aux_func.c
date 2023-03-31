@@ -1,5 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <stdarg.h>
-#include <unistd.h>
 #include "main.h"
 /**
  * print_char - aux function to print arguments called with %c (characters)
@@ -56,20 +58,43 @@ int print_perc(va_list args)
  */
 int print_int(va_list args)
 {
-	char *buff[30];
-	int num = va_arg(args, int);
-	unsigned int temp = num;
-	char *ptr;
+	long int num = va_arg(args, int);
+	long int n = num;
+	int count;
+	char save_num;
+	long int exp = 1;
 
-	ptr = buff[29];
-	*ptr = '\0';
-	while (temp != 0)
+	count = 0;
+
+	if (n < 0)
 	{
-		*--ptr = temp % 10 + '0';
-		temp /= 10;
+		write(1, "-", 1);
+		n *= -1;
+		num *= -1;
+		count++;
 	}
 
- 	printf("%s", buff); /* test to see if these even prints. (it doesnt) */
+	if (n == 0)
+	{
+		write(1, "0", 1);
+		count++;
+		return (1);
+	}
 
-	return (0);
+	while (n > 0)
+	{
+		n /= 10;
+		exp *= 10;
+		count++;
+	}
+	exp /= 10;
+
+	for(; exp >= 1; exp /= 10)
+	{
+		save_num = ((num / exp) % 10 + '0');
+		write(1, &save_num, 1);
+	}
+
+	return (count);
+
 }
