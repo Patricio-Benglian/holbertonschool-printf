@@ -7,9 +7,33 @@
     +include extra hyperlinks to each individual section for conversions. If possible make the list only visible fi you click it? Idk how complicated that is.
 -Authors
 -->
-<button type="button" class="collapsible"> Table of Contents </button>
-<div class="content">
-  <p>What does it do?</p>
-  <p>Formatting</p>
-  <p>Authors</p>
+
+<div id="toc_container">
+<p class="toc_title">Table of Contents</p>
+<ul class="toc_list">
+ <li><a href="Content1">What does it do?</a></li>
+<li><a href="Content2">Formatting</a></li>
+<ul>
+    <li><a href="Format1">%c</a></li>
+    <li><a href="Format2">%s</a></li>
+	<li><a href="Format3">%%</a></li>
+	<li><a href="Format4">%d</a></li>
+	<li><a href="Format5">%i</a></li>
+</ul>
+<li><a href="Content3">Authors</a></li>
 </div>
+	
+<hr/>
+	
+<h2><id="Content1"> What does it do?</h2>
+
+<h2><id="Content2"> Formatting</h2>
+	<h3><id = "Format1">%s</h3>
+		<p> [Insert how it works here] </p>
+	<h3><id = "Format2">%c</h3>
+		<p> [Insert how it works here] </p>
+	<h3><id = "Format3">%%</h3>
+		<p> [Insert how it works here] </p>
+<h2><id="Content3"> Authors</h2>
+	
+	<p> [Insert authors here] </p>
