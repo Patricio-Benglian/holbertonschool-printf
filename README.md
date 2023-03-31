@@ -11,16 +11,16 @@
 <div id="toc_container">
 <p class="toc_title">Table of Contents</p>
 <ul class="toc_list">
- <li><a href="#Content1">What does it do?</a></li>
-<li><a href="#Content2">Formatting</a></li>
+ <li><a href="#-what-does-it-do">What does it do?</a></li>
+<li><a href="#-formatting">Formatting</a></li>
 <ul>
-    <li><a href="#Format1">%c</a></li>
+    <li><a href="#c">%c</a></li>
     <li><a href="#s">%s</a></li>
 	<li><a href="#c">%%</a></li>
 	<li><a href="#i">%i</a></li>
 	<li><a href="#d">%d</a></li>
 </ul>
-<li><a href="#Content3">Authors</a></li>
+<li><a href="#-authors">Authors</a></li>
 </div>
 	
 <hr/>
@@ -28,16 +28,16 @@
 <h2><a id="#Content1"> What does it do?</h2>
 
 <h2><a id="#Content2"> Formatting</h2>
-	<h3><a id="#%s">%s</h3>
+	<h3>%s</h3>
 		<p> [Insert how it works here] </p>
-	<h3><a id="#Format2">%c</h3>
+	<h3>%c</h3>
 		<p> [Insert how it works here] </p>
-	<h3><a id="#Format3">%%</h3>
+	<h3>%%</h3>
 		<p> [Insert how it works here] </p>
-	<h3><a id="#Format4">%i</h3>
+	<h3>%i</h3>
 		<p> [Insert how it works here] </p>
-	<h3><a id="#Format5">%d</h3>
+	<h3>%d</h3>
 		<p> [Insert how it works here] </p>
-<h2><a id="#Content3"> Authors</h2>
+<h2>Authors</h2>
 	
 	<p> [Insert authors here] </p>
