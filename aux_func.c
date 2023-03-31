@@ -91,15 +91,5 @@ int print_int(va_list args)
 		save_num = ((num / exp) % 10 + '0');
 		write(1, &save_num, 1);
 	}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
- 	printf("%s", buff); /* test to see if these even prints. (it doesnt) */
-=======
 	return (count);
->>>>>>> Patricio
-
-=======
-	return (count);
->>>>>>> Patricio
 }
