@@ -20,7 +20,7 @@ int aux_conv(char s, va_list args)
 		{"i", print_int,},
 		{NULL, NULL},
 	};
-	while (i < 3)
+	while (i < 5)
 	{
 		/* looks for a match between char and values in struct */
 		if (s == *ops[i].conv)
