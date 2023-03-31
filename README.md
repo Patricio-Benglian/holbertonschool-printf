@@ -26,7 +26,7 @@
 <hr/>
 	
 <h2><a id="#Content1"> What does it do?</h2>
-
+	<p> [Insert what _printf does here] (probably compare it to normal printf a lot) </p>
 <h2><a id="#Content2"> Formatting</h2>
 	<h3>%s</h3>
 		<p> [Insert how it works here] </p>
@@ -39,5 +39,4 @@
 	<h3>%d</h3>
 		<p> [Insert how it works here] </p>
 <h2>Authors</h2>
-	
 	<p> [Insert authors here] </p>
