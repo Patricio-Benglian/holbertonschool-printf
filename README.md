@@ -20,7 +20,7 @@
 	<li><a href="#i">%i</a></li>
 	<li><a href="#d">%d</a></li>
 </ul>
-<li><a href="#-authors">Authors</a></li>
+<li><a href="#authors">Authors</a></li>
 </div>
 	
 <hr/>
