@@ -11,16 +11,16 @@
 <div id="toc_container">
 <p class="toc_title">Table of Contents</p>
 <ul class="toc_list">
- <li><a href="Content1">What does it do?</a></li>
-<li><a href="Content2">Formatting</a></li>
+ <li><a href="#Content1">What does it do?</a></li>
+<li><a href="#Content2">Formatting</a></li>
 <ul>
-    <li><a href="Format1">%c</a></li>
-    <li><a href="Format2">%s</a></li>
-	<li><a href="Format3">%%</a></li>
-	<li><a href="Format4">%d</a></li>
-	<li><a href="Format5">%i</a></li>
+    <li><a href="#Format1">%c</a></li>
+    <li><a href="#Format2">%s</a></li>
+	<li><a href="#Format3">%%</a></li>
+	<li><a href="#Format4">%d</a></li>
+	<li><a href="#Format5">%i</a></li>
 </ul>
-<li><a href="Content3">Authors</a></li>
+<li><a href="#Content3">Authors</a></li>
 </div>
 	
 <hr/>
