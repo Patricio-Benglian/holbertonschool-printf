@@ -8,10 +8,10 @@ _printf("{string}", {...})
 </table>
 </div>
 
-<div id="toc_container">
-<p class="toc_title">Table of Contents</p>
-<ul class="toc_list">
-<li><a href="#-what-does-it-do">How it works</a></li>
+<p>Table of Contents</font></p>
+<ul>
+<li><a href="#requirements">Requirements</a></a>
+<li><a href="#-how-it-works">How it works</a></li>
 <li><a href="#-syntax-">Syntax</a></li>
 <li><a href="#-formatting">Formatting</a></li>
 <ul>
@@ -22,11 +22,21 @@ _printf("{string}", {...})
 	<li><a href="#d">%d</a></li>
 </ul>
 <li><a href="#authors">Authors</a></li>
+<li><a href="#flowcharts">Flowcharts</a></li>
+</ul>
 </div>
 	
 <hr/>
+
+<h2>Requirements</h2>
+<ul>
+<li>Allowed editors: vi, vim, emacs</li>
+<li>All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89</li>
+<li>Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl</li>
+<li>You are not allowed to use global variables</li>
+<li>No more than 5 functions per file</li></ul>
 	
-<h2><a id="#Content1"> What does it do?</h2>
+<h2> How it works</h2>
 <p>	
 	The _printf function located in _printf.c allows you to print strings to standard output with flexibility. It can receive <b>conversion specifiers</b> (% followed by specific characters) which will be replaced with strings. The specific character following the % <i>specifies</i> indicates the kind of argument it is recieving. 
 	<br><br>
@@ -156,3 +166,46 @@ _printf("{string}", {...})
 		<a href="https://github.com/Patricio-Benglian">
 			@Patricio-Benglian
 		</a></p>
+
+<h2>Flowcharts</h2>
+<details>
+<summary>_printf.c flowchart</summary>
+	
+<img src="https://user-images.githubusercontent.com/124268011/229349499-71e07cd5-3c74-493c-ae8a-53fbf36be557.png" height="600" width="auto">
+	
+</details>
+	
+<details>
+<summary>get_conv.c flowchart</summary>
+	
+<img src="https://user-images.githubusercontent.com/124268011/229349511-40dee117-357e-49af-89ee-aa7e013ae83f.png" height="400" width="auto">
+	
+</details>
+	
+<details>
+<summary>aux_func.c flowcharts</summary>
+<details>
+<summary>print_char</summary>
+	
+<img src="https://user-images.githubusercontent.com/124268011/229350505-a968b2c6-8976-479f-8a5c-2b35d4c6c32b.png" height="300" width="auto">
+	
+</details>
+<details>
+<summary>print_string</summary>	
+	
+<img src="https://user-images.githubusercontent.com/124268011/229351079-83a6f1ac-9cfa-4845-ac43-34f02fba44a1.png" height="500" width="auto">
+	
+</details>
+<details>
+<summary>print_perc</summary>
+	
+<img src="https://user-images.githubusercontent.com/124268011/229351298-fffd7731-cdc3-4b4f-a4fb-9910e81a253b.png" height="300" width="auto">
+	
+</details>
+<details>
+<summary>print_num</summary>
+	
+<img src="https://user-images.githubusercontent.com/124268011/229351848-3f3c9f04-78e6-47c8-998d-4b85904bdab2.png" height="600" width="auto">
+	
+</details>
+</details>
