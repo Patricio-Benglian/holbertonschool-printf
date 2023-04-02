@@ -11,7 +11,7 @@ _printf("{string}", {...})
 <div id="toc_container">
 <p class="toc_title">Table of Contents</p>
 <ul class="toc_list">
-<li><a href="#-what-does-it-do">What does it do?</a></li>
+<li><a href="#-what-does-it-do">How it works</a></li>
 <li><a href="#-syntax-">Syntax</a></li>
 <li><a href="#-formatting">Formatting</a></li>
 <ul>
@@ -57,7 +57,7 @@ _printf("{string}", {...})
 </table>
 	
 </div>
-	
+
 <h2><a id="#Content2"> Formatting</h2>
 <h3>%s</h3>
 	<p> 
@@ -65,124 +65,88 @@ _printf("{string}", {...})
 		<br><br>
 		Example:
         </p>
-	<div align="center">
-		<table>
-			<tr>
-				<th>
+	<div align="left"><table><tr><th>
 					Syntax
 				</th>
 				<th>
 					Output
-				</th>
-			</tr>
-			<tr>
-			<th>
+				</th></tr>
+			<tr><th>
 				_printf("%s", "Hello");
 			</th>
 			<th>
 				Hello
-			</th>
-			</tr>
-		</table>
-	</div>
+			</th></tr></table></div>
 	<h3>%c</h3>
 	<p> 
 		Indicates that the argument received is of type char.
         </p>
-	<div align="center">
+	<div align="left">
 		<table>
-			<tr>
-				<th>
+			<tr><th>
 					Syntax
 				</th>
 				<th>
 					Output
 				</th>
 			</tr>
-			<tr>
-			<th>
+			<tr><th>
 				_print("%cello", 'H');
 			</th>
 			<th>
 				Hello
-			</th>
-			</tr>
-		</table>
-	</div>
+			</th></tr></table></div>
 	<h3>%%</h3>
 	<p> 
 		Nullifies previous % character, allowing to print %.
 	</p>
-	<div align="center">
-		<table>
-			<tr>
-				<th>
+	<div align="left"><table><tr><th>
 					Syntax
 				</th>
 				<th>
 					Output
-				</th>
-			</tr>
-			<tr>
-			<th>
+				</th></tr>
+			<tr><th>
 				_printf("%%s%%");
 			</th>
 			<th>
 				%s%
-			</th>
-			</tr>
-		</table>
-	</div>
+			</th></tr></table></div>
 	<h3>%i</h3>
 	<p> 
 		Indicates that the argument is of type integer.
 	</p>
-	<div align="center">
-		<table>
-			<tr>
-				<th>
+	<div align="left">
+		<table><tr><th>
 					Syntax
 				</th>
 				<th>
 					Output
-				</th>
-			</tr>
-			<tr>
-			<th>
+				</th></tr>
+			<tr><th>
 				_printf("I am %i years old", 23)
 			</th>
 			<th>
 				I am 23 years old
-			</th>
-			</tr>
-		</table>
-	</div>
+			</th></tr></table></div>
 	<h3>%d</h3>
 	<p> 
 		Indicates that the argument is of type decimal. Functionally the same as %i in most cases.
 	</p>
-	<div align="center">
-		<table>
-			<tr>
-				<th>
+	<div align="left">
+		<table><tr><th>
 					Syntax
 				</th>
 				<th>
 					Output
-				</th>
-			</tr>
-			<tr>
-			<th>
+				</th></tr>
+			<tr><th>
 				_printf("It is currently %d O'clock", 12);
 			</th>
 			<th>
 				It is currently 12 O'clock
-			</th>
-			</tr>
-		</table>
-	</div>
-<h2>Authors</h2>
-	<p>
+			</th></tr></table></div>
+<h2>Authors</h2><p>
 		Nicolás Fernandez
 		<a href="https://github.com/Nicoou">
 			@Nicoou
@@ -191,5 +155,4 @@ _printf("{string}", {...})
 		Patricio Benglian
 		<a href="https://github.com/Patricio-Benglian">
 			@Patricio-Benglian
-		</a>
-	</p>
+		</a></p>
