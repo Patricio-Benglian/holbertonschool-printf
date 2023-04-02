@@ -157,11 +157,13 @@ _printf("{string}", {...})
 				It is currently 12 O'clock
 			</th></tr></table></div>
 <h2>Authors</h2><p>
+	<img src="https://user-images.githubusercontent.com/124268011/229352297-c43177b9-50a4-4e3b-98b0-0235479c8572.png" height="35" width="35">
 		Nicolás Fernandez
 		<a href="https://github.com/Nicoou">
 			@Nicoou
 		</a>
 		<br>
+	<img src="https://user-images.githubusercontent.com/124268011/229352465-076ef3bb-3ddf-4668-9818-af13dca06e5c.png" height="35" width="35">
 		Patricio Benglian
 		<a href="https://github.com/Patricio-Benglian">
 			@Patricio-Benglian
